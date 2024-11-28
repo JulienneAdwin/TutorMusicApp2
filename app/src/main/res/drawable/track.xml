@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    song interface-->
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/orange"/>
+            <size android:height="10dp"/>
+            <corners android:radius="100dp"/>
+        </shape>
+    </item>
+
+    <!--    camera interface-->
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/purple"/>
+            <size android:height="10dp"/>
+            <corners android:radius="100dp"/>
+        </shape>
+    </item>
+</selector>

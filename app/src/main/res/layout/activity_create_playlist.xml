@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatePlaylistActivity"
+    android:background="@color/black">
+
+    <ImageButton
+        android:id="@+id/arrow_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:background="@color/black"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/heading_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/arrow_back"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Your Playlist"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/panel_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading_one">
+
+        <TextView
+            android:id="@+id/sort_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:text="Sort By"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/recently_played"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Recently Played"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/sort_by"
+            android:layout_marginStart="100dp"/>
+
+        <ImageView
+            android:id="@+id/sort_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/recently_played"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/baseline_sort_24"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/panel_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/panel_one">
+
+        <LinearLayout
+            android:id="@+id/create_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_button_background"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="8dp">
+
+            <ImageView
+                android:id="@+id/plus_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_add_24"
+                app:tint="@color/black" />
+        </LinearLayout>
+
+        <!-- Label -->
+        <TextView
+            android:id="@+id/create_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create New"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/create_button"
+            android:layout_marginStart="10dp"
+            />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/panel_two"
+        />
+
+
+
+</RelativeLayout>
