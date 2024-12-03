@@ -4,5 +4,8 @@
     <item name="android:navigationBarColor">@android:color/transparent</item>
     <item name="android:statusBarColor">@android:color/transparent</item>
     <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+    <item name="colorControlActivated">@color/nero</item>
+    <item name="colorAccent">@color/gray_light</item>
+    <item name="colorPrimary">@color/gray_dark</item>
   </style>
 </resources>

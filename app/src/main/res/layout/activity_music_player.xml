@@ -27,6 +27,7 @@
         app:track="@drawable/track"
         android:textOff="Song"
         android:textOn="Camera"
+        app:switchTextAppearance="@style/TextAppearance.AppCompat.Subhead"
         app:showText="true" />
 
     <TextView
@@ -69,22 +70,38 @@
         />
 
 
-    <androidx.appcompat.widget.SwitchCompat
-        android:layout_marginStart="30dp"
-        android:layout_width="wrap_content"
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleGroup"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/artist_name"
-        android:textOff="dislike"
-        android:textOn="like"
-        android:thumb="@drawable/thumb2"
-        app:switchTextAppearance="@style/TextAppearance.AppCompat.Subhead"
-        app:showText="true"
-        app:track="@drawable/track2" />
+        android:layout_marginStart="30dp"
+        app:checkedButton="@id/btn_one_way"
+        app:singleSelection="true">
+
+        <Button
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/btn_one_way"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Like" />
+
+        <Button
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/btn_round"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Dislike" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/toggleGroup"
         android:id="@+id/controls"
         android:padding="30dp">
 

@@ -35,4 +35,53 @@
         android:id="@+id/recycler_view"
         android:layout_below="@+id/songs_text"/>
 
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#000000">
+
+        <RadioButton
+            android:layout_marginTop="3dp"
+            android:id="@+id/rb_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/home_drawable"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="Home"
+            android:textColor="#FFFFFF"/>
+        <RadioButton
+            android:layout_marginTop="3dp"
+            android:id="@+id/rb_people"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/search_drawable"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="Search"
+            android:textColor="#FFFFFF"/>
+
+        <RadioButton
+            android:layout_marginTop="3dp"
+            android:id="@+id/rb_find"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/library_drawable"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:text="Your Library"
+            android:textColor="#FFFFFF"/>
+    </RadioGroup>
+
 </RelativeLayout>
